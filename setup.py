@@ -5,9 +5,9 @@ with open("README.md", "r", encoding='utf-8') as f:
     
 __version__ = '0.0.1'
 
-REPO_NAME = 'Chicken-Disease-Classification'
+REPO_NAME = 'chicken-disease-classification'
 AUTHOR_NAME = 'Benjamin LONTCHI'
-SRC_REPO = 'CNNClassifier'
+SRC_REPO = 'cnnClassifier'
 AUTHOR_EMAIL = 'benjamin.lontchi@groupe-esigelec.org'
 
 
@@ -24,5 +24,5 @@ setuptools.setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_NAME}/{REPO_NAME}/issues"
     },
     package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
+    packages=setuptools.find_packages(where="src/"),
 )
