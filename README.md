@@ -1,4 +1,4 @@
-# chicken-desease-classification
+# chicken-disease-classification
 
 
 ## Workflows
