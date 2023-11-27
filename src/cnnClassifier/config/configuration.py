@@ -56,7 +56,7 @@ class ConfigurationManager:
         prepare_callbacks_config = PrepareCallbacksConfig(
             root_dir=Path(config.root_dir),
             tensorboard_root_log_dir=Path(config.tensorboard_root_log_dir),
-            checkpoint_model_filepath=Path(config.checkpoint_model_filepath)
+            checkpoint_model_filepath=os.path.join('', config.checkpoint_model_filepath)
         )
         
         return prepare_callbacks_config
