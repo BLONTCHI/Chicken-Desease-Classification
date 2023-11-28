@@ -4,7 +4,7 @@ from src.cnnClassifier.components.training import Training
 from src.cnnClassifier import logger
 
 
-STAGE_NAME = "Training model"
+STAGE_NAME = "Model training"
 
 
 class ModelTrainingPipeline:
@@ -28,10 +28,10 @@ class ModelTrainingPipeline:
 if __name__ == '__main__':
     try:
         logger.info(f'********************************')
-        logger.info(f">>>>> stage '{STAGE_NAME}' started <<<<<")
+        logger.info(f">>>>> stage '{STAGE_NAME.upper()}' started <<<<<")
         obj = ModelTrainingPipeline()
         obj.main()
-        logger.info(f">>>>> stage '{STAGE_NAME}' completed <<<<<\n\nx===========x")
+        logger.info(f">>>>> stage '{STAGE_NAME.upper()}' completed <<<<<\n\nx===========x")
     except Exception as e:
         logger.exception(e)
         raise e
