@@ -50,7 +50,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-artifacts
 
 # Translations
 *.mo
@@ -128,7 +127,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-chicken-venv
 
 # Spyder project settings
 .spyderproject
@@ -161,4 +159,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+chicken-venv
+artifacts
 .vscode
