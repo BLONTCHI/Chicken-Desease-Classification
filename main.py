@@ -2,13 +2,14 @@ from src.cnnClassifier import logger
 from src.cnnClassifier.pipeline.stage_01__data_ingestion import DataIngestionTrainingPipeline
 from src.cnnClassifier.pipeline.stage_02__prepare_base_model import PrepareBaseModelTrainingPipeline
 from src.cnnClassifier.pipeline.stage_03__training import ModelTrainingPipeline
+from src.cnnClassifier.pipeline.stage_04__evaluation import EvaluationPipeline
 
 
 STAGE_NAME = "Data ingestion"
 try:
     logger.info(f">>>>> stage '{STAGE_NAME}' started <<<<<")
-    prepare_base_model = DataIngestionTrainingPipeline()
-    prepare_base_model.main()
+    data_ingestor = DataIngestionTrainingPipeline()
+    data_ingestor.main()
     logger.info(f">>>>> stage '{STAGE_NAME}' completed <<<<<\n\nx===========x")
 except Exception as e:
     logger.exception(e)
@@ -19,8 +20,8 @@ STAGE_NAME = "Prepare base model"
 try:
     logger.info(f"********************************")
     logger.info(f">>>>> stage '{STAGE_NAME}' started <<<<<")
-    prepare_base_model = PrepareBaseModelTrainingPipeline()
-    prepare_base_model.main()
+    base_model_preparator = PrepareBaseModelTrainingPipeline()
+    base_model_preparator.main()
     logger.info(f">>>>> stage '{STAGE_NAME}' completed <<<<<\n\nx===========x")
 except Exception as e:
     logger.exception(e)
@@ -31,8 +32,20 @@ STAGE_NAME = "Training model"
 try:
     logger.info(f"********************************")
     logger.info(f">>>>> stage '{STAGE_NAME}' started <<<<<")
-    prepare_base_model = ModelTrainingPipeline()
-    prepare_base_model.main()
+    model_trainer = ModelTrainingPipeline()
+    model_trainer.main()
+    logger.info(f">>>>> stage '{STAGE_NAME}' completed <<<<<\n\nx===========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+
+STAGE_NAME = "Model evaluation"
+try:
+    logger.info(f"********************************")
+    logger.info(f">>>>> stage '{STAGE_NAME}' started <<<<<")
+    model_evaluator = EvaluationPipeline()
+    model_evaluator.main()
     logger.info(f">>>>> stage '{STAGE_NAME}' completed <<<<<\n\nx===========x")
 except Exception as e:
     logger.exception(e)
