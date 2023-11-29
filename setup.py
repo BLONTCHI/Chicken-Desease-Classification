@@ -26,3 +26,6 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src/")
 )
+
+
+# Learn more about setup.py at https://godatadriven.com/blog/a-practical-guide-to-using-setup-py/

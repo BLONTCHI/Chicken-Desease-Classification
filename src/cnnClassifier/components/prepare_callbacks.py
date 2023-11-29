@@ -2,7 +2,7 @@
 import os
 import tensorflow as tf
 import time
-from src.cnnClassifier.entity.config_entity import PrepareCallbacksConfig
+from cnnClassifier.entity.config_entity import PrepareCallbacksConfig
 
 
 class PrepareCallback:

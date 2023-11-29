@@ -1,6 +1,6 @@
 from pathlib import Path
 import tensorflow as tf
-from src.cnnClassifier.entity.config_entity import PrepareBaseModelConfig
+from cnnClassifier.entity.config_entity import PrepareBaseModelConfig
 
 
 class PrepareBaseModel:
