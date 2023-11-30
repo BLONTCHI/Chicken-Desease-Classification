@@ -21,7 +21,7 @@
 Clone the repository
 
 ```bash
-https://github.com/entbappy/Chicken-Disease-Classification--Project
+https://github.com/BLONTCHI/Chicken-Disease-Classification.git
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
@@ -92,7 +92,7 @@ open up you local host and port
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 916529925533.dkr.ecr.eu-west-3.amazonaws.com/chicken
+    - Save the URI: ************.dkr.ecr.eu-west-3.amazonaws.com/chicken
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -139,7 +139,6 @@ open up you local host and port
 
 ## Save pass:
 
-s3cEZKH5yytiVnJ3h+eI3qhhzf9q1vNwEi6+q+WGdd+ACRCZ7JD6
 
 
 ## Run from terminal:
